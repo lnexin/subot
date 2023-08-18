@@ -4,6 +4,7 @@ import (
 	"fmt"
 	"github.com/eatmoreapple/openwechat"
 	"golang.org/x/time/rate"
+	"regexp"
 	"time"
 )
 
@@ -15,12 +16,11 @@ func TextMsgHandler(ctx *openwechat.MessageContext) {
 	// 处理好友消息
 
 	if ctx.IsSystem() || !ctx.IsText() || ctx.IsSendByGroup() {
-		fmt.Println("仅处理好友信息:TextMsgHandler")
+		//fmt.Println("仅处理好友信息:TextMsgHandler")
 		return
 	}
 
 	content := ctx.Content
-
 	sender, _ := ctx.Sender()
 
 	fmt.Println(sender)
@@ -28,8 +28,17 @@ func TextMsgHandler(ctx *openwechat.MessageContext) {
 	if sendName == "" {
 		sendName = sender.NickName
 	}
-	ctx.ReplyText(sendName + " 暂无语料分析能力:" + content)
 
-	ctx.Abort()
-	ctx.AsRead()
+	r, err := regexp.MatchString("淘宝", content)
+	if err != nil {
+		fmt.Println(err)
+	}
+
+	if r {
+		// 转链功能待添加
+		ctx.ReplyText(sendName + " 淘宝转链功能待添加")
+	}
+
+	//ctx.Abort()
+	//ctx.AsRead()
 }

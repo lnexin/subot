@@ -16,7 +16,7 @@ func GroupTextMsgHandler(ctx *openwechat.MessageContext) {
 	fmt.Println(ctx.MsgType.String())
 	// 仅处理群组消息
 	if ctx.IsSystem() || !ctx.IsText() || !ctx.IsAt() || !ctx.IsSendByGroup() {
-		fmt.Println("消息非群组内消息,不支持此 GroupTextMsgHandler 处理")
+		//fmt.Println("消息非群组内消息,不支持此 GroupTextMsgHandler 处理")
 		return
 	}
 	sender, _ := ctx.Sender()
@@ -48,6 +48,7 @@ func GroupTextMsgHandler(ctx *openwechat.MessageContext) {
 		content := strings.TrimSpace(strings.TrimPrefix(msgContent, atName))
 
 		sendByG, _ := ctx.SenderInGroup()
+
 		sendName := sendByG.DisplayName
 		if sendName == "" {
 			sendName = sendByG.NickName
