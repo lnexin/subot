@@ -1,0 +1,15 @@
+syntax = "proto3";
+option go_package = "cn/suwcbot/rpc";
+option java_outer_classname = "HelloRequest";
+option java_package = "cn.suwcbot.rpc";
+
+package cn.suwcbot.rpc;
+
+message SayHelloReq{}
+
+message SayHelloResp{}
+
+
+service Hello{
+  rpc SayHi(SayHelloReq) returns (SayHelloResp);
+}

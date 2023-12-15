@@ -1,0 +1,16 @@
+syntax = "proto3";
+
+package wcbot;
+option go_package="./wcbot";
+
+message Request {
+  string ping = 1;
+}
+
+message Response {
+  string pong = 1;
+}
+
+service Wcbot {
+  rpc Ping(Request) returns(Response);
+}
