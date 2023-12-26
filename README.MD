@@ -1,6 +1,16 @@
 ## subot
 a server, multiple language server
 
+---
+> feature 正在构思中...
+
+1. `github` 自动贴砖定时任务
+
+
+
+
+---
+#### 目录
 - proto     : pb 文件定义
 - gen       : 由*.proto 生成的公共模板/基类依赖文件
 - script    : 部分脚本
