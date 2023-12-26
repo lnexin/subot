@@ -2,7 +2,7 @@
 // versions:
 // - protoc-gen-go-grpc v1.3.0
 // - protoc             v4.25.1
-// source: wcbot.proto
+// source: luna.proto
 
 package wcbot
 
@@ -19,7 +19,7 @@ import (
 const _ = grpc.SupportPackageIsVersion7
 
 const (
-	Wcbot_Ping_FullMethodName = "/wcbot.Wcbot/Ping"
+	Wcbot_Ping_FullMethodName = "/luna.Wcbot/Ping"
 )
 
 // WcbotClient is the client API for Wcbot service.
@@ -96,7 +96,7 @@ func _Wcbot_Ping_Handler(srv interface{}, ctx context.Context, dec func(interfac
 // It's only intended for direct use with grpc.RegisterService,
 // and not to be introspected or modified (even as a copy)
 var Wcbot_ServiceDesc = grpc.ServiceDesc{
-	ServiceName: "wcbot.Wcbot",
+	ServiceName: "luna.Wcbot",
 	HandlerType: (*WcbotServer)(nil),
 	Methods: []grpc.MethodDesc{
 		{
@@ -105,5 +105,5 @@ var Wcbot_ServiceDesc = grpc.ServiceDesc{
 		},
 	},
 	Streams:  []grpc.StreamDesc{},
-	Metadata: "wcbot.proto",
+	Metadata: "luna.proto",
 }

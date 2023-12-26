@@ -2,7 +2,7 @@
 // versions:
 // 	protoc-gen-go v1.31.0
 // 	protoc        v4.25.1
-// source: wcbot.proto
+// source: luna.proto
 
 package wcbot
 
@@ -143,12 +143,12 @@ func file_wcbot_proto_rawDescGZIP() []byte {
 
 var file_wcbot_proto_msgTypes = make([]protoimpl.MessageInfo, 2)
 var file_wcbot_proto_goTypes = []interface{}{
-	(*Request)(nil),  // 0: wcbot.Request
-	(*Response)(nil), // 1: wcbot.Response
+	(*Request)(nil),  // 0: luna.Request
+	(*Response)(nil), // 1: luna.Response
 }
 var file_wcbot_proto_depIdxs = []int32{
-	0, // 0: wcbot.Wcbot.Ping:input_type -> wcbot.Request
-	1, // 1: wcbot.Wcbot.Ping:output_type -> wcbot.Response
+	0, // 0: luna.Wcbot.Ping:input_type -> luna.Request
+	1, // 1: luna.Wcbot.Ping:output_type -> luna.Response
 	1, // [1:2] is the sub-list for method output_type
 	0, // [0:1] is the sub-list for method input_type
 	0, // [0:0] is the sub-list for extension type_name

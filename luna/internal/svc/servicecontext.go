@@ -1,8 +1,6 @@
 package svc
 
-import (
-	"su-wcbot/api/internal/config"
-)
+import "su-wcbot/luna/internal/config"
 
 type ServiceContext struct {
 	Config config.Config

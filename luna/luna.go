@@ -4,10 +4,10 @@ import (
 	"flag"
 	"fmt"
 
-	"su-wcbot/wcbot/internal/config"
-	"su-wcbot/wcbot/internal/server"
-	"su-wcbot/wcbot/internal/svc"
-	"su-wcbot/wcbot/wcbot"
+	"su-wcbot/luna/internal/config"
+	"su-wcbot/luna/internal/server"
+	"su-wcbot/luna/internal/svc"
+	"su-wcbot/luna/wcbot"
 
 	"github.com/zeromicro/go-zero/core/conf"
 	"github.com/zeromicro/go-zero/core/service"
@@ -16,7 +16,7 @@ import (
 	"google.golang.org/grpc/reflection"
 )
 
-var configFile = flag.String("f", "etc/wcbot.yaml", "the config file")
+var configFile = flag.String("f", "etc/luna.yaml", "the config file")
 
 func main() {
 	flag.Parse()

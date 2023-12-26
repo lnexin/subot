@@ -1,6 +1,24 @@
-## su-wcbot
-a simple wechat-bot
+## subot
+a server, multiple language server
 
-- api  : server接口支持
-- rpc  : 远程条用支持
-- proto: 对象生成
+- proto     : pb 文件定义
+- gen       : 由*.proto 生成的公共模板/基类依赖文件
+- script    : 部分脚本
+- luna      : GO服务器
+  - docs    : 文档
+  - dev     : 环境准备和生成
+  - cmd     : 项目入口
+  - internal: 具体的server代码
+    - api   : 接口api
+    - service
+    - db
+    - errx
+    - models
+    - mocks
+    - ent
+    - utils
+    - config
+  - migrations ： 数据库变动 
+- lan  : java 服务器
+- web  : web 相关
+- app  : app 相关
